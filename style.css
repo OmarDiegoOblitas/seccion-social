@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2? family = Spartan: wght @ 400; 500; 700 & display = swap");
+:root {
+  /*Primary*/
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+  /*Secondary*/
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 1440px;
+  height: 800px;
+  min-width: 100%;
+  min-height: 100%;
+  background-image: url(./images/bg-pattern-bottom-desktop.svg);
+  font-family: "Spartan", sans-serif;
+}
+
+.container {
+  padding: 8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "info calificacion"
+    "card card";
+}
+.info {
+  grid-area: info;
+}
+.calificacion {
+  grid-area: calificacion;
+}
+.card {
+  grid-area: card;
+  padding-top: 3rem;
+}
+.title {
+  color: var(--Very-Dark-Magenta);
+  word-wrap: break-word;
+  font-size: 3.5rem;
+  padding-right: 4rem;
+  justify-content: center;
+  padding-bottom: 0.5rem;
+}
+.text {
+  color: var(--Dark-Grayish-Magenta);
+  font-size: 1.3rem;
+  word-wrap: break-word;
+  padding-right: 2rem;
+  display: flex;
+  text-align: start;
+}
+.calificacion {
+  display: flex;
+  flex-direction: column;
+  font-family: "Spartan", sans-serif;
+  padding-top: 2rem;
+}
+.calificacion span {
+  padding-left: 1.6rem;
+  color: var(--Very-Dark-Magenta);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+.reviews {
+  align-items: center;
+  padding: 1.5rem;
+  width: 60%;
+  background: var(--Light-Grayish-Magenta);
+  border-radius: 1rem;
+  margin: 1rem;
+}
+.guru {
+  align-items: center;
+  padding: 1.5rem;
+  width: 60%;
+  background: var(--Light-Grayish-Magenta);
+  border-radius: 1rem;
+  margin-left: 3rem;
+  margin-bottom: 1rem;
+}
+.besttech {
+  align-items: center;
+  padding: 1.5rem;
+  width: 60%;
+  background: var(--Light-Grayish-Magenta);
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 6rem;
+}
+.card {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0 2rem 0;
+}
+.name {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--Light-Grayish-Magenta);
+}
+.change{
+  color: var(--Soft-Pink);
+}
+.datos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2rem;
+}
+.image {
+  display: flex;
+  justify-content: start;
+  overflow: hidden;
+}
+.description {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-evenly;
+}
+.description > p {
+  text-indent: 12px;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--Light-Grayish-Magenta);
+  letter-spacing: 2px;
+}
+.card > div > div > img {
+  border-radius: 50%;
+  width: 16%;
+  height: 12%;
+}
+
+.box1,
+.box2,
+.box3 {
+  padding: 2rem;
+  background-color: var(--Very-Dark-Magenta);
+  border-radius: 1rem;
+  margin-right: 2rem;
+  padding-top: 2rem;
+  height: 18rem;
+}
+.box2 {
+  margin-top: 2rem;
+}
+.box3 {
+  margin-top: 4rem;
+}
+@media screen and (max-width: 375px) {
+  body{
+    width: 100%;
+    padding: 2rem;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+  .info{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 2rem 18rem 2rem 18rem;
+  }
+  .title {
+    justify-content: center;
+    align-items: center;
+  }
+  .text{
+    text-align: center;
+  }
+  .calificacion {
+    align-items: center;
+  }
+  .reviews {
+    width: 450px;
+    justify-content: center;
+  }
+  .guru {
+    width: 450px;
+    justify-content: center;
+    margin: 1rem;
+  }
+  .besttech {
+    width: 450px;
+    justify-content: center;
+    margin: 1rem;
+  }
+  .card {
+    flex-direction: column;
+    width: 500px;
+    margin-left: 20rem;
+  }
+  .box1 {
+    align-items: center;
+    justify-content: center;
+  }
+
+}
